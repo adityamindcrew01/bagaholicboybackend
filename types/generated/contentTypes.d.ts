@@ -580,6 +580,35 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBagsListBagsList extends Struct.CollectionTypeSchema {
+  collectionName: 'bags_lists';
+  info: {
+    singularName: 'bags-list';
+    pluralName: 'bags-lists';
+    displayName: 'bagsList';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tag: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::bags-list.bags-list'
+    >;
+  };
+}
+
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
@@ -611,6 +640,34 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiChanelSmallbannerChanelSmallbanner
+  extends Struct.SingleTypeSchema {
+  collectionName: 'chanel_smallbanners';
+  info: {
+    singularName: 'chanel-smallbanner';
+    pluralName: 'chanel-smallbanners';
+    displayName: 'ChanelSmallbanner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::chanel-smallbanner.chanel-smallbanner'
+    >;
+  };
+}
+
 export interface ApiChanelbannerbigChanelbannerbig
   extends Struct.SingleTypeSchema {
   collectionName: 'chanelbannerbigs';
@@ -635,6 +692,66 @@ export interface ApiChanelbannerbigChanelbannerbig
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::chanelbannerbig.chanelbannerbig'
+    >;
+  };
+}
+
+export interface ApiCommonProductCommonProduct
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'common_products';
+  info: {
+    singularName: 'common-product';
+    pluralName: 'common-products';
+    displayName: 'CommonProduct';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    tag: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::common-product.common-product'
+    >;
+  };
+}
+
+export interface ApiFashionListFashionList extends Struct.CollectionTypeSchema {
+  collectionName: 'fashion_lists';
+  info: {
+    singularName: 'fashion-list';
+    pluralName: 'fashion-lists';
+    displayName: 'fashionList';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tag: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fashion-list.fashion-list'
     >;
   };
 }
@@ -1138,8 +1255,12 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::bags-list.bags-list': ApiBagsListBagsList;
       'api::category.category': ApiCategoryCategory;
+      'api::chanel-smallbanner.chanel-smallbanner': ApiChanelSmallbannerChanelSmallbanner;
       'api::chanelbannerbig.chanelbannerbig': ApiChanelbannerbigChanelbannerbig;
+      'api::common-product.common-product': ApiCommonProductCommonProduct;
+      'api::fashion-list.fashion-list': ApiFashionListFashionList;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::product.product': ApiProductProduct;
