@@ -4,7 +4,8 @@
   "info": {
     "singularName": "common-product",
     "pluralName": "common-products",
-    "displayName": "CommonProduct"
+    "displayName": "CommonProduct",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,17 +17,40 @@
       "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "tag": {
       "type": "string",
       "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "image2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "path": {
+      "type": "string"
     }
   }
 }

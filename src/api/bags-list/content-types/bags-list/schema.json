@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bags-list",
     "pluralName": "bags-lists",
-    "displayName": "bagsList"
+    "displayName": "bagsList",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,16 +17,40 @@
       "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "tag": {
+      "type": "string"
+    },
+    "description2": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "path": {
       "type": "string"
     }
   }

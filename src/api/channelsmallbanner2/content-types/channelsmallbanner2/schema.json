@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "chanelbannerbigs",
+  "collectionName": "channelsmallbanner2s",
   "info": {
-    "singularName": "chanelbannerbig",
-    "pluralName": "chanelbannerbigs",
-    "displayName": "CHANELBANNERBIG",
-    "description": ""
+    "singularName": "channelsmallbanner2",
+    "pluralName": "channelsmallbanner2s",
+    "displayName": "channelsmallbanner2"
   },
   "options": {
     "draftAndPublish": true
@@ -13,15 +12,14 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "path": {
       "type": "string"

@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "fashion_lists",
+  "collectionName": "jewelleries",
   "info": {
-    "singularName": "fashion-list",
-    "pluralName": "fashion-lists",
-    "displayName": "fashionList",
-    "description": ""
+    "singularName": "jewellery",
+    "pluralName": "jewelleries",
+    "displayName": "Jewellery"
   },
   "options": {
     "draftAndPublish": true
@@ -16,20 +15,6 @@
       "type": "string",
       "required": true
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "tag": {
-      "type": "string"
-    },
     "description": {
       "type": "text"
     },
@@ -39,16 +24,25 @@
     "date": {
       "type": "date"
     },
-    "image2": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
+    "image": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "image2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     },
     "path": {
       "type": "string"

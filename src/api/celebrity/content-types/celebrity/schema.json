@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "fashion_lists",
+  "collectionName": "celebrities",
   "info": {
-    "singularName": "fashion-list",
-    "pluralName": "fashion-lists",
-    "displayName": "fashionList",
+    "singularName": "celebrity",
+    "pluralName": "celebrities",
+    "displayName": "celebrity",
     "description": ""
   },
   "options": {
@@ -13,8 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "image": {
       "type": "media",
@@ -30,6 +29,9 @@
     "tag": {
       "type": "string"
     },
+    "pathlink": {
+      "type": "string"
+    },
     "description": {
       "type": "text"
     },
@@ -40,18 +42,14 @@
       "type": "date"
     },
     "image2": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
-    },
-    "path": {
-      "type": "string"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
