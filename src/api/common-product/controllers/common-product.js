@@ -15,7 +15,11 @@ module.exports = createCoreController('api::common-product.common-product', ({st
       const entry = await strapi.db.query('api::common-product.common-product').findOne({
         
         where: { id: id },
-        populate: {image: "image"}
+        populate: {
+             image: "image" ,
+            image2: "image2"
+    }, 
+       
        
       });
         const sanitizedResults = await this.sanitizeOutput(entry, ctx);
