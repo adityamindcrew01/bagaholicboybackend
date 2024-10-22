@@ -4,7 +4,8 @@
   "info": {
     "singularName": "jewellery",
     "pluralName": "jewelleries",
-    "displayName": "Jewellery"
+    "displayName": "Jewellery",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,26 +26,31 @@
       "type": "date"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "image2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "path": {
+      "type": "string"
+    },
+    "tags": {
       "type": "string"
     }
   }

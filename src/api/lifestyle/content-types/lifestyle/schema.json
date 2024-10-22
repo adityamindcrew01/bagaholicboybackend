@@ -4,7 +4,8 @@
   "info": {
     "singularName": "lifestyle",
     "pluralName": "lifestyles",
-    "displayName": "lifestyle"
+    "displayName": "lifestyle",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,26 +25,31 @@
       "type": "date"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "image2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "path": {
+      "type": "string"
+    },
+    "tag": {
       "type": "string"
     }
   }

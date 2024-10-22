@@ -4,7 +4,8 @@
   "info": {
     "singularName": "moretolovelist",
     "pluralName": "moretolovelists",
-    "displayName": "moretolovelist"
+    "displayName": "moretolovelist",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,29 +22,34 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "image2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "date": {
       "type": "date"
     },
     "path": {
+      "type": "string"
+    },
+    "tag": {
       "type": "string"
     }
   }
